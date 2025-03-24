@@ -1,11 +1,11 @@
-document.getElementById("showCalendar").addEventListener("click", () => showSection("calendarSection"));
-document.getElementById("showTasks").addEventListener("click", () => showSection("taskSection"));
-document.getElementById("showNotes").addEventListener("click", () => showSection("notesSection"));
+document.querySelector("#btnShowCalendar").addEventListener("click", () => showSection("calendarSection"));
+document.querySelector("#btnShowTasks").addEventListener("click", () => showSection("taskSection"));
+document.querySelector("#btnShowNotes").addEventListener("click", () => showSection("notesSection"));
 
-function showSection(sectionId) {
-    document.getElementById("calendarSection").classList.add("hidden");
-    document.getElementById("taskSection").classList.add("hidden");
-    document.getElementById("notesSection").classList.add("hidden");
+function showSection(strSectionId) {
+    document.querySelector("#calendarSection").classList.add("hidden");
+    document.querySelector("#taskSection").classList.add("hidden");
+    document.querySelector("#notesSection").classList.add("hidden");
     
-    document.getElementById(sectionId).classList.remove("hidden");
+    document.querySelector(`#${strSectionId}`).classList.remove("hidden");
 }

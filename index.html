@@ -7,13 +7,12 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <header>
         <h1>Digital Planner</h1>
         <nav>
-            <button id="showCalendar">Calendar</button>
-            <button id="showTasks">Tasks</button>
-            <button id="showNotes">Notes</button>
+            <button id="btnShowCalendar" aria-label="Show calendar view">Calendar</button>
+            <button id="btnShowTasks" aria-label="Show task list">Tasks</button>
+            <button id="btnShowNotes" aria-label="Show notes section">Notes</button>
         </nav>
     </header>
 
@@ -25,14 +24,14 @@
 
         <section id="taskSection" class="hidden">
             <h2>Task List</h2>
-            <input type="text" id="taskInput" placeholder="New task...">
-            <button id="addTask">Add</button>
+            <input id="txtTaskInput" class="form-control" type="text" placeholder="New task..." aria-label="Enter a new task">
+            <button id="btnAddTask" aria-label="Add a new task">Add</button>
             <ul id="taskList"></ul>
         </section>
 
         <section id="notesSection" class="hidden">
             <h2>Notes</h2>
-            <textarea id="notesArea" placeholder="Note..."></textarea>
+            <textarea id="txtNotesArea" placeholder="Write your notes here..." aria-label="Write notes"></textarea>
         </section>
     </main>
 

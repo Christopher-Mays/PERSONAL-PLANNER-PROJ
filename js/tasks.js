@@ -1,16 +1,19 @@
-const taskInput = document.getElementById("taskInput");
-const addTaskButton = document.getElementById("addTask");
-const taskList = document.getElementById("taskList");
+const txtTaskInput = document.querySelector("#txtTaskInput");
+const btnAddTask = document.querySelector("#btnAddTask");
+const ulTaskList = document.querySelector("#taskList");
 
-addTaskButton.addEventListener("click", () => {
-    if (taskInput.value.trim() !== "") {
-        let taskItem = document.createElement("li");
-        taskItem.textContent = taskInput.value;
+btnAddTask.addEventListener("click", () => {
+    let strTaskValue = txtTaskInput.value.trim();
+    if (strTaskValue !== "") {
+        let liTaskItem = document.createElement("li");
+        liTaskItem.textContent = strTaskValue;
+        liTaskItem.setAttribute("role", "button");
+        liTaskItem.setAttribute("aria-label", `Task: ${strTaskValue}. Click to remove.`);
         
         // Click to remove task
-        taskItem.addEventListener("click", () => taskItem.remove());
+        liTaskItem.addEventListener("click", () => liTaskItem.remove());
         
-        taskList.appendChild(taskItem);
-        taskInput.value = ""; // Clear input field
+        ulTaskList.appendChild(liTaskItem);
+        txtTaskInput.value = ""; // Clear input field
     }
 });

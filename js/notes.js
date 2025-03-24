@@ -1,5 +1,5 @@
-const notesArea = document.getElementById("notesArea");
+const txtNotesArea = document.querySelector("#txtNotesArea");
 
-notesArea.addEventListener("input", () => {
-    console.log("Note updated:", notesArea.value);
+txtNotesArea.addEventListener("input", () => {
+    console.log("Note updated:", txtNotesArea.value);
 });
